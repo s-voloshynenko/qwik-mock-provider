@@ -13,9 +13,11 @@
 import {
   renderToStream,
   type RenderToStreamOptions,
-} from "@builder.io/qwik/server";
-import { manifest } from "@qwik-client-manifest";
-import Root from "./root";
+} from '@builder.io/qwik/server';
+import { manifest } from '@qwik-client-manifest';
+import Root from './root';
+
+declare const __APP_VERSION__: string
 
 export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
@@ -23,7 +25,8 @@ export default function (opts: RenderToStreamOptions) {
     ...opts,
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
-      lang: "en-us",
+      lang: 'en-GB',
+      'data-app-version': __APP_VERSION__,
       ...opts.containerAttributes,
     },
     serverData: {

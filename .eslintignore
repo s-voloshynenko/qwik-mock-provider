@@ -27,8 +27,11 @@ build
 .vscode
 .rollup.cache
 dist
+tests
 tsconfig.tsbuildinfo
 vite.config.ts
+vitest-setup.ts
+vitest.config.ts
 *.spec.tsx
 *.spec.ts
 .netlify
